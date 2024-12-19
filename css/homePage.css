@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(../image/backGround.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.allText {
+    margin-top: 5vw;
+}
+
+.mainText {
+    font-size: 5vw;
+    text-align: center;
+    color: rgb(215, 212, 212);
+}
+
+.backGround {
+    position: fixed;
+    height: 20VW;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.text,
+h2 {
+    position: sticky;
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(215, 212, 212);
+    width: 80%;
+    margin: auto;
+    font-family: 'Karantina', system-ui;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.clickToStart {
+    font-size: 2.2vw;
+    color: rgb(215, 212, 212);
+}
+
+@media screen and (max-width: 1010px) {
+    body {
+        background-image: url(../image/backGround2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .allText {
+        margin-top: 9vw;
+    }
+
+    .mainText {
+        font-size: 6vw;
+        text-align: center;
+        color: rgb(215, 212, 212);
+    }
+
+    .backGround {
+        height: 60vw;
+        width: 100%;
+    }
+
+    .text,
+    h2 {
+        font-size: 3.5vw;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        color: rgb(215, 212, 212);
+        width: 80%;
+        margin: auto;
+        font-family: 'Karantina', system-ui;
+        letter-spacing: 2px;
+        z-index: 1;
+    }
+
+    .clickToStart {
+        font-size: 4vw;
+        color: rgb(215, 212, 212);
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צוללות</title>
+    <link rel="stylesheet" href="../css/gamePage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <audio src="../audio/correctAudio.wav" id="correctAudio"></audio>
+    <audio src="../audio/nonCorrectAudio.wav" id="nonCorrectAudio"></audio>
+
+    <div class="icons">
+        <a href="../html/gamePage.html">
+            <p class="textIcon">חדש</p>
+            <img src="../image/circleArrow.jpg" class="icon">
+        </a>
+        <a href="../html/mainPage.html">
+            <p class="textIcon">יציאה</p>
+            <img src="../image/exit.png" class="icon">
+        </a>
+        <a href="../html/instructions.html">
+            <p class="textIcon">הוראות</p>
+            <img src="../image/instructions.png" class="icon">
+        </a>
+        <a href="../html/points.html">
+            <p class="textIcon">ניקוד</p>
+            <img src="../image/points.png" class="icon">
+        </a>
+        <div>
+            <p class="textIcon">שמע</p>
+            <img src="../image/sound.png" class="icon" id="mute">
+        </div>
+    </div>
+
+    <div class="flexBoards">
+        <div class="labelYourBoard">
+            <h2 id="nameBoard">משתמש</h2>
+            <div id="yourSquares"></div>
+        </div>
+        <div class="labelHisBoards">
+            <h2>האויב</h2>
+            <div id="computerSquares"></div>
+        </div>
+    </div>
+
+    <div class="submarines">
+        <div class="flexSubmarinesRight">
+            <div draggable="true" class="submarine" id="submarine2">
+                <img src="../image/submarines/1x/topTwo.png" class="six" draggable="true" id="submarine2" data-len="2">
+                <img src="../image/submarines/1x/buttomTwo.png" class="six" draggable="true" id="submarine2"
+                    data-len="2">
+            </div>
+        </div>
+        <div class="flexSubmarinesMiddle">
+            <div draggable="true" class="submarine" id="submarine3">
+                <img src="../image/submarines/1x/top1Three.png" class="six" draggable="true" id="submarine3"
+                    data-len="3">
+                <img src="../image/submarines/1x/top2Three.png" class="six" draggable="true" id="submarine3"
+                    data-len="3">
+                <img src="../image/submarines/1x/top3Three.png" class="six" draggable="true" id="submarine3"
+                    data-len="3">
+            </div>
+            <div draggable="true" class="submarine" id="submarine4">
+                <img src="../image/submarines/1x/top1Three.png" class="six" draggable="true" id="submarine4"
+                    data-len="3">
+                <img src="../image/submarines/1x/top2Three.png" class="six" draggable="true" id="submarine4"
+                    data-len="3">
+                <img src="../image/submarines/1x/top3Three.png" class="six" draggable="true" id="submarine4"
+                    data-len="3">
+            </div>
+        </div>
+        <div class="flexSubmarinesLeft">
+            <div draggable="true" class="submarine" id="submarine6">
+                <img src="../image/submarines/1x/topFour.jpg.png" class="six" draggable="true" id="submarine6"
+                    data-len="4">
+                <img src="../image/submarines/1x/top2Four.jpg.png" class="six" draggable="true" id="submarine6"
+                    data-len="4">
+                <img src="../image/submarines/1x/top3Four.jpg.png" class="six" draggable="true" id="submarine6"
+                    data-len="4">
+                <img src="../image/submarines/1x/top4Four.jpg.png" class="six" draggable="true" id="submarine6"
+                    data-len="4">
+            </div>
+
+            <div draggable="true" class="submarine" id="submarine7">
+                <img src="../image/submarines/1x/topFour.jpg.png" class="six" draggable="true" id="submarine7"
+                    data-len="4">
+                <img src="../image/submarines/1x/top2Four.jpg.png" class="six" draggable="true" id="submarine7"
+                    data-len="4">
+                <img src="../image/submarines/1x/top3Four.jpg.png" class="six" draggable="true" id="submarine7"
+                    data-len="4">
+                <img src="../image/submarines/1x/top4Four.jpg.png" class="six" draggable="true" id="submarine7"
+                    data-len="4">
+            </div>
+        </div>
+    </div>
+
+    <div id="frame" class="displayButton">
+        <button class="custom-btn btn-5"><span>התחלה</span></button>
+    </div>
+
+    <audio src="../audio/correctAudio.wav" id="correctAudio"></audio>
+    <audio src="../audio/nonCorrectAudio.wav" id="nonCorrectAudio"></audio>
+
+    <div id="notConnected">
+        <div class="backGround"></div>
+        <p class="connectedOrNot">נראה שאינך מחובר <br> אנא התחבר</p>
+        <h2 class="connectedOrNot"> להתחברות או הרשמה - <a class="backToTheGame" href="../html/sign.html">לחץ כאן </a>
+        </h2>
+    </div>
+
+    <div class="popup-overlay">
+        <div class="popup-container">
+            <div class="popup-card">
+                <h2>ניצחת!</h2>
+                <p>ברגעים אלו החידיה המיוחדת מבצעת את דרכה להצלת המלך <br> הנך מקבל את אות הגיבור הלאומי!</p>
+                <button id="close-popup"><a href="../html/gamePage.html">משחק חדש</a></button>
+                <button id="close-popup"><a href="../html/mainPage.html">לחזרה לתפריט</a></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/gamePage.js"></script>
+</body>
+
+</html>

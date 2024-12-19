@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url(../image/backToInstructions.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.dis {
+  margin-top: 7vw;
+}
+
+.titel {
+  font-size: 3vw;
+  text-align: center;
+  color: rgb(215, 212, 212);
+}
+
+.backGround {
+  position: fixed;
+  height: 25VW;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.text,
+h2 {
+  position: sticky;
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(215, 212, 212);
+  width: 83%;
+  margin: auto;
+  font-family: 'Karantina', system-ui;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.backToGame {
+  font-size: 2vw;
+  color: rgb(215, 212, 212);
+}
+
+@media screen and (max-width: 1010px) {
+  body {
+    background-image: url(../image/backToInstructions2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Fredoka', sans-serif;
+  }
+
+  .titel {
+    font-size: 6vw;
+    text-align: center;
+    color: rgb(215, 212, 212);
+  }
+
+  .backGround {
+
+    height: 83vw;
+    width: 100%;
+  }
+
+  .text,
+  h2 {
+    font-size: 3vw;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(215, 212, 212);
+    width: 80%;
+    margin: auto;
+    font-family: 'Karantina', system-ui;
+    letter-spacing: 2px;
+    z-index: 1;
+  }
+
+  .backToGame {
+    font-size: 4vw;
+    color: rgb(215, 212, 212);
+  }
+
+}

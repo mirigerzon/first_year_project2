@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-image: url(../image/backToOops.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 10vw;
+    font-weight: 500;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.backToTheGame {
+    font-size: 2.2vw;
+    font-weight: bolder;
+    font-family: 'Fredoka', sans-serif;
+    text-decoration: none;
+    color: rgb(228, 24, 99);
+}
+
+
+@media screen and (max-width: 1010px) {
+    body {
+        margin: 0;
+        background-image: url(../image/‏‏backToOops2.jpg);
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        font-family: 'Fredoka', sans-serif;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 9vw;
+        margin-top: 60vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .backToTheGame {
+        font-size: 4vw;
+    }
+}

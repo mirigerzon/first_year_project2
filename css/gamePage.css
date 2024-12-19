@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  direction: rtl;
+
+}
+
+
+body {
+  background-image: url(../image/backGround.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4vw;
+  font-family: 'Fredoka', sans-serif;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* icons */
+.textIcon {
+  position: absolute;
+  text-align: center;
+  margin-right: 5vw;
+  margin-top: 1.2vw;
+  color: black;
+  font-size: 1.3vw;
+  font-weight: 400;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  justify-content: space-around;
+  flex: 20%;
+  margin-right: 2vw;
+}
+
+.icon {
+  width: 4vw;
+  background: none;
+  z-index: 10;
+}
+
+/* square */
+.flexBoards {
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  justify-content: space-evenly;
+}
+
+#computerSquares,
+#yourSquares {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(11, 3vw);
+  grid-template-rows: repeat(11, 3vw);
+  text-align: center;
+  font-size: 1.3vw;
+  margin-top: 3%;
+  justify-content: space-around;
+}
+
+.square {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(65, 66, 66);
+
+  box-sizing: border-box;
+}
+
+.Xsquare {
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(..//image/submarines/x.png);
+  background-color: rgb(65, 66, 66);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.roundSquare {
+  background-color: aliceblue;
+  border: 1px solid rgb(65, 66, 66);
+  ;
+}
+
+.letter {
+  box-sizing: border-box;
+  background-color: rgb(60, 185, 238);
+  position: absolute;
+  margin-top: 0.5vw;
+}
+
+.square:hover {
+  background: none;
+}
+
+.XImage {
+  width: 4vw;
+  height: auto;
+}
+
+
+/* submarines */
+.six {
+  width: 2.7vw;
+  height: auto;
+  background: none;
+  z-index: 10;
+}
+
+.flexSubmarinesMiddle,
+.flexSubmarinesLeft,
+.flexSubmarinesRight {
+  display: flex;
+}
+
+
+.submarine {
+  display: grid;
+  width: 3.5vw;
+  height: auto;
+  background: none;
+  flex: 15%;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+#notConnected {
+  position: absolute;
+  text-align: center;
+  height: 20vw;
+  width: 100vw;
+}
+
+.backGround {
+  position: fixed;
+  height: 20VW;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+  z-index: 3;
+}
+
+#notConnected p {
+  margin-top: 2.5vw;
+}
+
+.connectedOrNot {
+  position: sticky;
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  font-family: 'Karantina', system-ui;
+  letter-spacing: 3px;
+  z-index: 4;
+  width: 100vw;
+}
+
+.backToTheGame {
+  color: white;
+}
+
+.connected {
+  display: none;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 30em;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#close-popup a {
+  text-decoration: none;
+  color: white;
+}
+
+#close-popup {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#close-popup:hover {
+  background-color: #0056b3;
+}
+
+/* win popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 30em;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#close-popup a {
+  text-decoration: none;
+  color: white;
+}
+
+#close-popup {
+  background-color: #fabc48;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#close-popup:hover {
+  background-color: #fabc48;
+}
+
+/* start button */
+.displayButton {
+  display: none;
+}
+
+#frame {
+  position: absolute;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  z-index: 100;
+}
+
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(7, 7, 7);
+  background: linear-gradient(0deg, rgb(21, 21, 21) 0%, rgb(15, 15, 15) 100%);
+}
+
+.btn-5:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #ff7b00;
+  box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+
+@media screen and (max-width: 1010px) {
+  body {
+    background-image: url(../image/backGround2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #background {
+    display: none;
+  }
+
+  .flexBoards {
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #computerSquares,
+  #yourSquares {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(11, 4vw);
+    grid-template-rows: repeat(11, 4vw);
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-top: 3%;
+    justify-content: center;
+
+  }
+
+  .textIcon {
+    position: absolute;
+    text-align: center;
+    margin-right: 7vw;
+    margin-top: 1.2vw;
+    color: black;
+    font-size: 3vw;
+    font-weight: 400;
+  }
+
+  .icons {
+    gap: 3vw;
+    margin-right: 2vw;
+  }
+
+  .icon {
+    width: 6vw;
+    background: none;
+    z-index: 10;
+  }
+
+  .flexSubmarinesMiddle,
+  .flexSubmarinesLeft,
+  .flexSubmarinesRight {
+    display: block;
+    margin-top: 3vw;
+  }
+
+  .six {
+    width: 3.3vw;
+    height: auto;
+    background: none;
+    z-index: 10;
+  }
+}
